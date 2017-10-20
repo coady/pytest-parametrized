@@ -22,8 +22,8 @@ def parametrized(func, combine=None):
     return pytest.mark.parametrize(*args)(func)
 
 
-def fixture(*params):
-    return pytest.fixture(params=params)(lambda request: request.param)
+def fixture(*params, **kwargs):
+    return pytest.fixture(params=params, **kwargs)(lambda request: request.param)
 
 
 parametrized.fixture = fixture

@@ -2,6 +2,11 @@ import pytest
 data = pytest.parametrized.fixture('one', 'two')
 
 
+def test_options():
+    fixture = pytest.parametrized.fixture(name='override')
+    assert fixture._pytestfixturefunction.name == 'override'
+
+
 def test_fixture(data):
     assert data in ('one', 'two')
 
