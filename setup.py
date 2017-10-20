@@ -1,0 +1,31 @@
+from setuptools import setup
+
+setup(
+    name='pytest-parametrized',
+    version='0.1',
+    description='Pytest plugin for parametrizing tests with default iterables.',
+    long_description=open('README.rst').read(),
+    author='Aric Coady',
+    author_email='aric.coady@gmail.com',
+    url='https://bitbucket.org/coady/pytest-parametrized',
+    license='Apache Software License',
+    py_modules=['parametrized'],
+    install_requires=['pytest'],
+    tests_require=['pytest-cov'],
+    keywords='pytest parametrize',
+    entry_points={'pytest11': ['parametrized = parametrized']},
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Framework :: Pytest',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+)
