@@ -1,11 +1,11 @@
-.. image:: https://img.shields.io/pypi/v/parametrized.svg
-   :target: https://pypi.python.org/pypi/parametrized/
-.. image:: https://img.shields.io/pypi/pyversions/parametrized.svg
-.. image:: https://img.shields.io/pypi/status/parametrized.svg
-.. image:: https://img.shields.io/travis/coady/parametrized.svg
-   :target: https://travis-ci.org/coady/parametrized
-.. image:: https://img.shields.io/codecov/c/github/coady/parametrized.svg
-   :target: https://codecov.io/github/coady/parametrized
+.. image:: https://img.shields.io/pypi/v/pytest-parametrized.svg
+   :target: https://pypi.python.org/pypi/pytest-parametrized/
+.. image:: https://img.shields.io/pypi/pyversions/pytest-parametrized.svg
+.. image:: https://img.shields.io/pypi/status/pytest-parametrized.svg
+.. image:: https://img.shields.io/travis/coady/pytest-parametrized.svg
+   :target: https://travis-ci.org/coady/pytest-parametrized
+.. image:: https://img.shields.io/codecov/c/github/coady/pytest-parametrized.svg
+   :target: https://codecov.io/github/coady/pytest-parametrized
 
 Pytest plugin for parametrizing tests with default iterables,
 providing alternative syntax for pytest.mark.parametrize.
