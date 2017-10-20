@@ -12,7 +12,7 @@ setup(
     py_modules=['parametrized'],
     install_requires=['pytest'],
     tests_require=['pytest-cov'],
-    keywords='pytest parametrize',
+    keywords='pytest parametrize fixture',
     entry_points={'pytest11': ['parametrized = parametrized']},
     classifiers=[
         'Development Status :: 4 - Beta',
