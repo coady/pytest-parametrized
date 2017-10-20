@@ -22,6 +22,11 @@ def parametrized(func, combine=None):
     return pytest.mark.parametrize(*args)(func)
 
 
+def fixture(*params):
+    return pytest.fixture(params=params)(lambda request: request.param)
+
+
+parametrized.fixture = fixture
 parametrized.zip = partial(parametrized, combine=zip)
 parametrized.product = partial(parametrized, combine=itertools.product)
 

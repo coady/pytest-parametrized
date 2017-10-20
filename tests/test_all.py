@@ -1,4 +1,9 @@
 import pytest
+data = pytest.parametrized.fixture('one', 'two')
+
+
+def test_fixture(data):
+    assert data in ('one', 'two')
 
 
 @pytest.parametrized

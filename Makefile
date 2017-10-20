@@ -6,7 +6,7 @@ check:
 
 clean:
 	hg st -in | xargs rm
-	rm -rf build dist parametrized.egg-info
+	rm -rf build dist pytest_parametrized.egg-info
 
 dist:
 	python setup.py sdist bdist_wheel
