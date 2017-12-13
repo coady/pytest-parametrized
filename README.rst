@@ -46,14 +46,16 @@ Require plugin as usual in `conftest.py`.
 
    pytest_plugins = 'parametrized', ...
 
-Dependencies
-=========================
-* Python 2.7, 3.4+
-
 Tests
 =========================
 100% branch coverage. ::
 
    $ pytest [--cov]
+
+Changes
+=========================
+0.2
+
+* ``fixture`` keyword options
 
 .. _Pytest plugin: https://docs.pytest.org/en/latest/plugins.html

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pytest-parametrized',
-    version='0.1',
+    version='0.2',
     description='Pytest plugin for parametrizing tests with default iterables.',
     long_description=open('README.rst').read(),
     author='Aric Coady',
@@ -11,6 +11,7 @@ setup(
     license='Apache Software License',
     py_modules=['parametrized'],
     install_requires=['pytest'],
+    python_requires='>=2.7',
     tests_require=['pytest-cov'],
     keywords='pytest parametrize fixture',
     entry_points={'pytest11': ['parametrized = parametrized']},
