@@ -8,7 +8,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Aric Coady',
     author_email='aric.coady@gmail.com',
-    url='https://bitbucket.org/coady/pytest-parametrized',
+    url='https://github.com/coady/pytest-parametrized',
     license='Apache Software License',
     py_modules=['parametrized'],
     install_requires=['pytest'],
@@ -17,7 +17,7 @@ setup(
     keywords='pytest parametrize fixture',
     entry_points={'pytest11': ['parametrized = parametrized']},
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Framework :: Pytest',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
@@ -28,6 +28,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Software Development :: Testing',
     ],
 )
