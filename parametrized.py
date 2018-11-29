@@ -7,7 +7,7 @@ __version__ = '0.2'
 getargspec = getattr(inspect, 'getfullargspec', inspect.getargspec)
 
 
-def parametrized(func, combine=None):
+def parametrized(func, combine=None, **kwargs):
     """Decorate a function with combined parameters."""
     argspec = getargspec(func)
     params = dict(zip(reversed(argspec.args), reversed(argspec.defaults)))
@@ -16,7 +16,7 @@ def parametrized(func, combine=None):
         args, = params.items()  # multiple keywords require combine function, e.g., zip
     else:
         args = ','.join(params), combine(*params.values())
-    return pytest.mark.parametrize(*args)(func)
+    return pytest.mark.parametrize(*args, **kwargs)(func)
 
 
 def fixture(*params, **kwargs):
