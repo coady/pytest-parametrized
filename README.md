@@ -86,7 +86,7 @@ pytest_plugins = 'parametrized', ...
     $ pytest [--cov]
 
 # Changes
-dev
+1.0
 * `parametrized` keyword options
 
 0.2
