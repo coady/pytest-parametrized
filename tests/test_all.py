@@ -1,4 +1,5 @@
 import pytest
+
 data = pytest.parametrized.fixture('one', 'two')
 
 
@@ -29,6 +30,7 @@ def test_product(name='abc', value=range(3)):
 
 def test_error(name='abc', value=range(3)):
     with pytest.raises(ValueError):
+
         @pytest.parametrized
         def test(name=(), value=()):
             pass

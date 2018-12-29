@@ -1,8 +1,8 @@
 check:
 	python3 setup.py $@ -ms
-	flake8
-	pytest-2.7 --cov 
-	pytest --cov --cov-append --cov-fail-under=100
+	black --$@ -q .
+	pytest-2.7
+	pytest --cov --cov-fail-under=100
 
 clean:
 	hg st -in | xargs rm

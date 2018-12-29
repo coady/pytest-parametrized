@@ -1,1 +1,1 @@
-pytest_plugins = 'parametrized',
+pytest_plugins = ('parametrized',)

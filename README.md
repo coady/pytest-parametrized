@@ -1,10 +1,12 @@
 [![image](https://img.shields.io/pypi/v/pytest-parametrized.svg)](https://pypi.org/project/pytest-parametrized/)
 [![image](https://img.shields.io/pypi/pyversions/pytest-parametrized.svg)](https://python3statement.org)
+[![image](https://pepy.tech/badge/pytest-parametrized)](https://pepy.tech/project/pytest-parametrized)
 ![image](https://img.shields.io/pypi/status/pytest-parametrized.svg)
 [![image](https://img.shields.io/travis/coady/pytest-parametrized.svg)](https://travis-ci.org/coady/pytest-parametrized)
 [![image](https://img.shields.io/codecov/c/github/coady/pytest-parametrized.svg)](https://codecov.io/github/coady/pytest-parametrized)
 [![image](https://requires.io/github/coady/pytest-parametrized/requirements.svg)](https://requires.io/github/coady/pytest-parametrized/requirements/)
 [![image](https://api.codeclimate.com/v1/badges/2abbe9cb6925b77018d6/maintainability)](https://codeclimate.com/github/coady/pytest-parametrized/maintainability)
+[![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
 
 [Pytest plugin](https://docs.pytest.org/en/latest/plugins.html) for parametrizing tests with default iterables,
 providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/parametrize.html).
