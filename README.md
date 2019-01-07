@@ -16,15 +16,17 @@ Decorate tests with iterable default values.
 
 ## functions
 ```python
-@pytest.parametrized
+from parametrized import parametrized
+
+@parametrized
 def test(name=values, ...):
     """test single parametrized arg with each value"""
 
-@pytest.parametrized.zip
+@parametrized.zip
 def test(name=values, name1=values1, ...):
     """test parametrized args with zipped values"""
 
-@pytest.parametrized.product
+@parametrized.product
 def test(name=values, name1=values1, ...):
     """test parametrized args with cartesian product of values"""
 ```
@@ -39,7 +41,7 @@ Zip before and after example:
 def test_eval(test_input, expected):
     assert eval(test_input) == expected
 
-@pytest.parametrized.zip
+@parametrized.zip
 def test_eval(test_input=("3+5", "2+4", "6*9"), expected=(8, 6, 42)):
     assert eval(test_input) == expected
 ```
@@ -51,7 +53,7 @@ Product before and after example:
 def test_foo(x, y):
     pass
 
-@pytest.parametrized.product
+@parametrized.product
 def test_foo(x=(0, 1), y=(2, 3)):
     pass
 ```
@@ -60,7 +62,7 @@ def test_foo(x=(0, 1), y=(2, 3)):
 [Parametrized fixtures](https://docs.pytest.org/en/latest/fixture.html#fixture-parametrize) which simply return their param.
 
 ```python
-fixture_name = pytest.parametrized.fixture(*params, **kwargs)
+fixture_name = parametrized.fixture(*params, **kwargs)
 ```
 
 Before and after example:
@@ -69,18 +71,20 @@ Before and after example:
 def a(request):
     return request.param
 
-a = pytest.parametrized.fixture(0, 1, ids=["spam", "ham"])
+a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```
 
 # Installation
 
     $ pip install pytest-parametrized
 
-Require plugin as usual in [conftest.py](https://docs.pytest.org/en/latest/plugins.html#requiring-loading-plugins-in-a-test-module-or-conftest-file).
+Note `parametrized` can be added to pytest's namespace by registering it as a plugin in [conftest.py](https://docs.pytest.org/en/latest/plugins.html#requiring-loading-plugins-in-a-test-module-or-conftest-file).
 
 ```python
 pytest_plugins = 'parametrized', ...
 ```
+
+However, pytest encourages [importing modules explicitly](https://docs.pytest.org/en/latest/deprecations.html#pytest-namespace).
 
 # Tests
 100% branch coverage.
@@ -88,6 +92,9 @@ pytest_plugins = 'parametrized', ...
     $ pytest [--cov]
 
 # Changes
+dev
+* pytest 4 compatibility
+
 1.0
 * `parametrized` keyword options
 
