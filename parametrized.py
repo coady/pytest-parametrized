@@ -4,7 +4,7 @@ import warnings
 from functools import partial
 import pytest
 
-__version__ = '1.0'
+__version__ = '1.1'
 getargspec = getattr(inspect, 'getfullargspec', inspect.getargspec)
 
 

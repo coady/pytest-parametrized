@@ -92,7 +92,7 @@ However, pytest encourages [importing modules explicitly](https://docs.pytest.or
     $ pytest [--cov]
 
 # Changes
-dev
+1.1
 * pytest 4 compatibility
 
 1.0
