@@ -1,6 +1,5 @@
 import inspect
 import itertools
-import warnings
 from functools import partial
 import pytest
 
@@ -27,8 +26,3 @@ def fixture(*params, **kwargs):
 parametrized.fixture = fixture
 parametrized.zip = partial(parametrized, combine=zip)
 parametrized.product = partial(parametrized, combine=itertools.product)
-
-
-def pytest_configure():
-    warnings.warn("use `from parametrized import parametrized` instead", DeprecationWarning)
-    pytest.parametrized = parametrized

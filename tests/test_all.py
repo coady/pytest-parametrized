@@ -5,7 +5,6 @@ data = parametrized.fixture('one', 'two')
 
 
 def test_options():
-    assert pytest.parametrized is parametrized
     fixture = parametrized.fixture(name='override')
     assert fixture._pytestfixturefunction.name == 'override'
     assert parametrized(lambda x='': x, scope='module').kwargs == {'scope': 'module'}

@@ -8,7 +8,7 @@
 [![image](https://api.codeclimate.com/v1/badges/2abbe9cb6925b77018d6/maintainability)](https://codeclimate.com/github/coady/pytest-parametrized/maintainability)
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
 
-[Pytest plugin](https://docs.pytest.org/en/latest/plugins.html) for parametrizing tests with default iterables,
+[Pytest](https://pytest.org/) module for parametrizing tests with default iterables,
 providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/parametrize.html).
 
 # Usage
@@ -42,7 +42,7 @@ def test_eval(test_input, expected):
     assert eval(test_input) == expected
 
 @parametrized.zip
-def test_eval(test_input=("3+5", "2+4", "6*9"), expected=(8, 6, 42)):
+def test_eval(test_input=["3+5", "2+4", "6*9"], expected=[8, 6, 42]):
     assert eval(test_input) == expected
 ```
 
@@ -54,7 +54,7 @@ def test_foo(x, y):
     pass
 
 @parametrized.product
-def test_foo(x=(0, 1), y=(2, 3)):
+def test_foo(x=[0, 1], y=[2, 3]):
     pass
 ```
 
@@ -78,20 +78,15 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 
     $ pip install pytest-parametrized
 
-Note `parametrized` can be added to pytest's namespace by registering it as a plugin in [conftest.py](https://docs.pytest.org/en/latest/plugins.html#requiring-loading-plugins-in-a-test-module-or-conftest-file).
-
-```python
-pytest_plugins = 'parametrized', ...
-```
-
-However, pytest encourages [importing modules explicitly](https://docs.pytest.org/en/latest/deprecations.html#pytest-namespace).
-
 # Tests
 100% branch coverage.
 
     $ pytest [--cov]
 
 # Changes
+dev
+* Namespace plugin removed
+
 1.1
 * pytest 4 compatibility
 
