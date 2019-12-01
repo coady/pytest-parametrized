@@ -84,7 +84,7 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
     $ pytest [--cov]
 
 # Changes
-dev
+1.2
 * Namespace plugin removed
 
 1.1
