@@ -15,7 +15,6 @@ setup(
     python_requires='>=2.7',
     tests_require=['pytest-cov'],
     keywords='pytest parametrize fixture',
-    entry_points={'pytest11': ['parametrized = parametrized']},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Framework :: Pytest',
@@ -28,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Software Development :: Testing',
     ],
 )
