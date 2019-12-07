@@ -4,12 +4,11 @@ from functools import partial
 import pytest
 
 __version__ = '1.2'
-getargspec = getattr(inspect, 'getfullargspec', inspect.getargspec)
 
 
 def parametrized(func, combine=None, **kwargs):
     """Decorate a function with combined parameters."""
-    argspec = getargspec(func)
+    argspec = inspect.getfullargspec(func)
     params = dict(zip(reversed(argspec.args), reversed(argspec.defaults)))
     func.__defaults__ = ()  # pytest ignores params with defaults
     if combine is None:

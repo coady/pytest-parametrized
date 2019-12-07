@@ -1,5 +1,5 @@
 [![image](https://img.shields.io/pypi/v/pytest-parametrized.svg)](https://pypi.org/project/pytest-parametrized/)
-[![image](https://img.shields.io/pypi/pyversions/pytest-parametrized.svg)](https://python3statement.org)
+![image](https://img.shields.io/pypi/pyversions/pytest-parametrized.svg)
 [![image](https://pepy.tech/badge/pytest-parametrized)](https://pepy.tech/project/pytest-parametrized)
 ![image](https://img.shields.io/pypi/status/pytest-parametrized.svg)
 [![image](https://img.shields.io/travis/coady/pytest-parametrized.svg)](https://travis-ci.org/coady/pytest-parametrized)
@@ -84,6 +84,9 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
     $ pytest [--cov]
 
 # Changes
+dev
+* Python 3 required
+
 1.2
 * Namespace plugin removed
 

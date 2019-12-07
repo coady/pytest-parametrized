@@ -12,7 +12,7 @@ setup(
     license='Apache Software License',
     py_modules=['parametrized'],
     install_requires=['pytest'],
-    python_requires='>=2.7',
+    python_requires='>=3.5',
     tests_require=['pytest-cov'],
     keywords='pytest parametrize fixture',
     classifiers=[
@@ -21,8 +21,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
