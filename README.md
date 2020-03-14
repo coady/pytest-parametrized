@@ -75,17 +75,20 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```
 
 # Installation
-
-    $ pip install pytest-parametrized
+```console
+% pip install pytest-parametrized
+```
 
 # Tests
 100% branch coverage.
 
-    $ pytest [--cov]
+```console
+% pytest [--cov]
+```
 
 # Changes
 dev
-* Python 3 required
+* Python >=3.6 required
 
 1.2
 * Namespace plugin removed
