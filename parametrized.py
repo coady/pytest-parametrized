@@ -3,7 +3,7 @@ import itertools
 from functools import partial
 import pytest
 
-__version__ = '1.2'
+__version__ = '1.3'
 
 
 def parametrized(func, combine=None, **kwargs):

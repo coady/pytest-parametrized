@@ -87,7 +87,7 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```
 
 # Changes
-dev
+1.3
 * Python >=3.6 required
 
 1.2

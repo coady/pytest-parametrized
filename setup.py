@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pytest-parametrized',
-    version='1.2',
+    version='1.3',
     description='Pytest plugin for parametrizing tests with default iterables.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
