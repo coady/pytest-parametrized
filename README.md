@@ -3,9 +3,9 @@
 [![image](https://pepy.tech/badge/pytest-parametrized)](https://pepy.tech/project/pytest-parametrized)
 ![image](https://img.shields.io/pypi/status/pytest-parametrized.svg)
 [![image](https://github.com/coady/pytest-parametrized/workflows/build/badge.svg)](https://github.com/coady/pytest-parametrized/actions)
-[![image](https://img.shields.io/codecov/c/github/coady/pytest-parametrized.svg)](https://codecov.io/github/coady/pytest-parametrized)
-[![image](https://requires.io/github/coady/pytest-parametrized/requirements.svg)](https://requires.io/github/coady/pytest-parametrized/requirements/)
-[![image](https://api.codeclimate.com/v1/badges/2abbe9cb6925b77018d6/maintainability)](https://codeclimate.com/github/coady/pytest-parametrized/maintainability)
+[![image](https://codecov.io/gh/coady/pytest-parametrized/branch/main/graph/badge.svg)](https://codecov.io/gh/coady/pytest-parametrized/)
+[![image](https://api.dependabot.com/badges/status?host=github&repo=coady/pytest-parametrized)](https://github.com/coady/pytest-parametrized/network/alerts)
+[![image](https://github.com/coady/pytest-parametrized/workflows/codeql/badge.svg)](https://github.com/coady/pytest-parametrized/security/code-scanning)
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
 
 [Pytest](https://pytest.org/) module for parametrizing tests with default iterables,

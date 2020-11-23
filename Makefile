@@ -1,5 +1,7 @@
 check:
-	python3 setup.py $@ -ms
-	black --$@ -q .
+	pytest --cov
+
+lint:
+	python3 setup.py check -ms
+	black --check .
 	flake8
-	pytest --cov --cov-fail-under=100
