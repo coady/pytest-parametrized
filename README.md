@@ -4,7 +4,6 @@
 ![image](https://img.shields.io/pypi/status/pytest-parametrized.svg)
 [![image](https://github.com/coady/pytest-parametrized/workflows/build/badge.svg)](https://github.com/coady/pytest-parametrized/actions)
 [![image](https://codecov.io/gh/coady/pytest-parametrized/branch/main/graph/badge.svg)](https://codecov.io/gh/coady/pytest-parametrized/)
-[![image](https://api.dependabot.com/badges/status?host=github&repo=coady/pytest-parametrized)](https://github.com/coady/pytest-parametrized/network/alerts)
 [![image](https://github.com/coady/pytest-parametrized/workflows/codeql/badge.svg)](https://github.com/coady/pytest-parametrized/security/code-scanning)
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
 
@@ -87,6 +86,9 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```
 
 # Changes
+dev
+* Python >=3.7 required
+
 1.3
 * Python >=3.6 required
 
