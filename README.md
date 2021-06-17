@@ -8,7 +8,7 @@
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
 
 [Pytest](https://pytest.org/) module for parametrizing tests with default iterables,
-providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/parametrize.html).
+providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/how-to/parametrize.html).
 
 # Usage
 Decorate tests with iterable default values.
@@ -58,7 +58,7 @@ def test_foo(x=[0, 1], y=[2, 3]):
 ```
 
 ## fixtures
-[Parametrized fixtures](https://docs.pytest.org/en/latest/fixture.html#fixture-parametrize) which simply return their param.
+[Parametrized fixtures](https://docs.pytest.org/en/latest/how-to/fixtures.html#fixture-parametrize) which simply return their param.
 
 ```python
 fixture_name = parametrized.fixture(*params, **kwargs)
