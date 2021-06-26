@@ -7,18 +7,17 @@
 [![image](https://github.com/coady/pytest-parametrized/workflows/codeql/badge.svg)](https://github.com/coady/pytest-parametrized/security/code-scanning)
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
 
-[Pytest](https://pytest.org/) module for parametrizing tests with default iterables,
-providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/how-to/parametrize.html).
+[Pytest](https://pytest.org/) decorator for parametrizing tests with default iterables, providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/how-to/parametrize.html).
 
 # Usage
-Decorate tests with iterable default values.
+Decorate tests with iterable default values. Other fixtures can still be used as normal.
 
 ## functions
 ```python
 from parametrized import parametrized
 
 @parametrized
-def test(name=values, ...):
+def test(..., name=values):
     """test single parametrized arg with each value"""
 
 @parametrized.zip
