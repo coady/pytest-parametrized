@@ -1,7 +1,42 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-parametrized"
+dynamic = ["version"]
+description = "Pytest decorator for parametrizing tests with default iterables."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE.txt"}
+authors = [{name = "Aric Coady", email = "aric.coady@gmail.com"}]
+keywords = ["pytest", "parametrize", "parameterize", "fixture"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/coady/pytest-parametrized"
+
+[tool.setuptools.dynamic]
+version = {attr = "parametrized.__version__"}
 
 [tool.black]
 line-length = 100
 skip-string-normalization = true
+
+[tool.coverage.run]
+source = ["parametrized"]
+branch = true

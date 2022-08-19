@@ -3,4 +3,4 @@ check:
 
 lint:
 	black --check .
-	flake8
+	flake8 --ignore E501
