@@ -22,6 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Testing",
 ]
 dependencies = ["pytest"]
@@ -35,6 +36,9 @@ version = {attr = "parametrized.__version__"}
 [tool.black]
 line-length = 100
 skip-string-normalization = true
+
+[tool.ruff]
+ignore = ["E501"]
 
 [tool.coverage.run]
 source = ["parametrized"]
