@@ -83,25 +83,3 @@ a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```console
 % pytest [--cov]
 ```
-
-# Changes
-dev
-* Python >=3.8 required
-
-1.4
-* Python >=3.7 required
-
-1.3
-* Python >=3.6 required
-
-1.2
-* Namespace plugin removed
-
-1.1
-* pytest 4 compatibility
-
-1.0
-* `parametrized` keyword options
-
-0.2
-* `fixture` keyword options
