@@ -5,7 +5,7 @@
 [![image](https://github.com/coady/pytest-parametrized/workflows/build/badge.svg)](https://github.com/coady/pytest-parametrized/actions)
 [![image](https://codecov.io/gh/coady/pytest-parametrized/branch/main/graph/badge.svg)](https://codecov.io/gh/coady/pytest-parametrized/)
 [![image](https://github.com/coady/pytest-parametrized/workflows/codeql/badge.svg)](https://github.com/coady/pytest-parametrized/security/code-scanning)
-[![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://pypi.org/project/black/)
+[![image](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 [Pytest](https://pytest.org/) decorator for parametrizing tests with default iterables, providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/how-to/parametrize.html).
 
