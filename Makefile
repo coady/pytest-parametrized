@@ -2,5 +2,5 @@ check:
 	pytest -s --cov
 
 lint:
-	ruff .
+	ruff check .
 	ruff format --check .
