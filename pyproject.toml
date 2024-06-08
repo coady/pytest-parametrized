@@ -1,10 +1,6 @@
-[build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "pytest-parametrized"
-dynamic = ["version"]
+version = "1.5"
 description = "Pytest decorator for parametrizing tests with default iterables."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -31,9 +27,6 @@ dependencies = ["pytest"]
 Homepage = "https://github.com/coady/pytest-parametrized"
 Changelog = "https://github.com/coady/pytest-parametrized/blob/main/CHANGELOG.md"
 Issues = "https://github.com/coady/pytest-parametrized/issues"
-
-[tool.setuptools.dynamic]
-version = {attr = "parametrized.__version__"}
 
 [tool.ruff]
 line-length = 100
