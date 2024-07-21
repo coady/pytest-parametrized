@@ -3,6 +3,8 @@ import itertools
 from functools import partial
 import pytest
 
+__all__ = ['parametrized']
+
 
 def parametrized(func, combine=None, **kwargs):
     """Decorate a function with combined parameters."""
