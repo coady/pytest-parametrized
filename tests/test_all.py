@@ -35,3 +35,8 @@ def test_error(name='abc', value=range(3)):
         @parametrized
         def test(name=(), value=()):
             pass
+
+
+@parametrized.product
+def test_param(key=[0], value=[0, pytest.param(1, marks=pytest.mark.xfail())]):
+    assert key == value

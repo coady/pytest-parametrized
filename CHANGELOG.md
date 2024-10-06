@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## Unreleased
 ### Changed
 * Python >=3.9 required
+* `pytest.param` supported
 
 ## [1.5](https://pypi.org/project/pytest-parametrized/1.5/) - 2023-11-03
 ### Changed

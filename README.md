@@ -56,6 +56,8 @@ def test_foo(x=[0, 1], y=[2, 3]):
     pass
 ```
 
+`pytest.param` is supported for single values or `.product`.
+
 ## fixtures
 [Parametrized fixtures](https://docs.pytest.org/en/latest/how-to/fixtures.html#fixture-parametrize) which simply return their param.
 

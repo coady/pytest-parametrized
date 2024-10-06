@@ -11,11 +11,13 @@ def parametrized(func, combine=None, **kwargs):
     argspec = inspect.getfullargspec(func)
     params = dict(zip(reversed(argspec.args), reversed(argspec.defaults)))
     func.__defaults__ = ()  # pytest ignores params with defaults
-    if combine is None:
-        (args,) = params.items()  # multiple keywords require combine function, e.g., zip
-    else:
-        args = ','.join(params), combine(*params.values())
-    return pytest.mark.parametrize(*args, **kwargs)(func)
+    if combine is None and len(params) > 1:
+        raise ValueError("multiple keywords require combine function, e.g., zip")
+    if combine not in (None, itertools.product):
+        params = {','.join(params): combine(*params.values())}
+    for param in params.items():
+        func = pytest.mark.parametrize(*param, **kwargs)(func)
+    return func
 
 
 def fixture(*params, **kwargs):
