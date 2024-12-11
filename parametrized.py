@@ -26,4 +26,5 @@ def fixture(*params, **kwargs):
 
 parametrized.fixture = fixture
 parametrized.zip = partial(parametrized, combine=zip)
+parametrized.zip_strict = partial(parametrized, combine=partial(zip, strict=True))
 parametrized.product = partial(parametrized, combine=itertools.product)
