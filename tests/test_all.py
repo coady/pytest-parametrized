@@ -1,3 +1,5 @@
+from textwrap import dedent
+
 import pytest
 from parametrized import parametrized
 
@@ -40,3 +42,23 @@ def test_error(name='abc', value=range(3)):
 @parametrized.product
 def test_param(key=[0], value=[0, pytest.param(1, marks=pytest.mark.xfail())]):
     assert key == value
+
+
+def test_zip_strict_error(tmp_path, capsys):
+    unrunnable_test_file = tmp_path / "test_zip_strict_error.py"
+
+    unrunnable_test_file.write_text(
+        dedent(
+            """
+            from parametrized import parametrized
+
+            @parametrized.zip_strict
+            def test_zip_strict_error(name='abc', value=range(4)):
+                pass
+            """
+        ).lstrip()
+    )
+
+    exit_code = pytest.main([str(unrunnable_test_file)])
+    assert exit_code == pytest.ExitCode.INTERRUPTED
+    assert "ValueError: zip() argument 2 is shorter than argument 1" in capsys.readouterr().out
