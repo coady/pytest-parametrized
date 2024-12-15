@@ -3,8 +3,6 @@ import itertools
 from functools import partial
 import pytest
 
-__all__ = ['parametrized']
-
 
 def parametrized(func, combine=None, **kwargs):
     """Decorate a function with combined parameters."""
@@ -25,5 +23,5 @@ def fixture(*params, **kwargs):
 
 
 parametrized.fixture = fixture
-parametrized.zip = partial(parametrized, combine=zip)
+parametrized.zip = partial(parametrized, combine=partial(zip, strict=True))
 parametrized.product = partial(parametrized, combine=itertools.product)

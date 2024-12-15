@@ -29,12 +29,17 @@ def test_product(name='abc', value=range(3)):
     assert name in set('abc') and value in (0, 1, 2)
 
 
-def test_error(name='abc', value=range(3)):
+def test_error():
     with pytest.raises(ValueError):
 
         @parametrized
-        def test(name=(), value=()):
-            pass
+        def _(name=(), value=()): ...
+
+    @parametrized.zip
+    def strict(name='abc', value=()): ...
+
+    with pytest.raises(ValueError):
+        list(strict.pytestmark[0].args[1])
 
 
 @parametrized.product

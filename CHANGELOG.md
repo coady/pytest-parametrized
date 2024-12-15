@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## Unreleased
+### Changed
 * Python >=3.10 required
+* `zip` uses strict option
 
 ## [1.6](https://pypi.org/project/pytest-parametrized/1.6/) - 2024-10-21
 ### Changed
