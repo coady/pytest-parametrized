@@ -1,6 +1,6 @@
 check:
-	pytest -s --cov
+	uv run pytest -s --cov
 
 lint:
-	ruff check .
-	ruff format --check .
+	uv run ruff check .
+	uv run ruff format --check .

@@ -6,7 +6,7 @@ data = parametrized.fixture('one', 'two')
 
 def test_options():
     fixture = parametrized.fixture(name='override')
-    assert fixture._pytestfixturefunction.name == 'override'
+    assert fixture.name == 'override'
     assert parametrized(lambda x='': x, scope='module').kwargs == {'scope': 'module'}
 
 

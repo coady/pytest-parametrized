@@ -12,15 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.10', '3.11', '3.12', '3.13', '3.14.0-alpha - 3.14']
+        python-version: ['3.10', '3.11', '3.12', '3.13', '3.14t']
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
+    - uses: astral-sh/setup-uv@v6
       with:
         python-version: ${{ matrix.python-version }}
-    - run: pip install pytest-cov
     - run: make check
-    - run: coverage xml
+    - run: uv run coverage xml
     - uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
@@ -29,8 +28,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-      with:
-        python-version: 3.x
-    - run: pip install ruff
+    - uses: astral-sh/setup-uv@v6
     - run: make lint
