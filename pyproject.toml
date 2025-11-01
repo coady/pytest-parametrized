@@ -3,7 +3,7 @@ name = "pytest-parametrized"
 version = "1.7"
 description = "Pytest decorator for parametrizing tests with default iterables."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "Apache-2.0"
 authors = [{name = "Aric Coady", email = "aric.coady@gmail.com"}]
 keywords = ["pytest", "parametrize", "parameterize", "fixture"]
@@ -13,11 +13,11 @@ classifiers = [
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Topic :: Software Development :: Testing",
 ]
 dependencies = ["pytest"]

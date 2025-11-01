@@ -9,10 +9,10 @@
 
 [Pytest](https://pytest.org/) decorator for parametrizing tests with default iterables, providing alternative syntax for [pytest.mark.parametrize](https://docs.pytest.org/en/latest/how-to/parametrize.html).
 
-# Usage
+## Usage
 Decorate tests with iterable default values. Other fixtures can still be used as normal.
 
-## functions
+### functions
 ```python
 from parametrized import parametrized
 
@@ -58,7 +58,7 @@ def test_foo(x=[0, 1], y=[2, 3]):
 
 `pytest.param` is supported for single values or `.product`.
 
-## fixtures
+### fixtures
 [Parametrized fixtures](https://docs.pytest.org/en/latest/how-to/fixtures.html#fixture-parametrize) which simply return their param.
 
 ```python
@@ -74,14 +74,14 @@ def a(request):
 a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```
 
-# Installation
+## Installation
 ```console
-% pip install pytest-parametrized
+pip install pytest-parametrized
 ```
 
-# Tests
+## Tests
 100% branch coverage.
 
 ```console
-% pytest [--cov]
+pytest [--cov]
 ```
