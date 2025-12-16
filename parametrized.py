@@ -12,7 +12,7 @@ def parametrized(func, combine=None, **kwargs):
     if combine is None and len(params) > 1:
         raise ValueError("multiple keywords require combine function, e.g., zip")
     if combine not in (None, itertools.product):
-        params = {','.join(params): combine(*params.values())}
+        params = {",".join(params): combine(*params.values())}
     for param in params.items():
         func = pytest.mark.parametrize(*param, **kwargs)(func)
     return func

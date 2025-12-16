@@ -2,5 +2,5 @@ check:
 	uv run pytest -s --cov
 
 lint:
-	uv run ruff check
-	uv run ruff format --check
+	uvx ruff check
+	uvx ruff format --check
