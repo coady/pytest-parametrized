@@ -1,13 +1,13 @@
 name: release
 
-on:
-  push:
-    tags: ['v*']
+permissions:
+  id-token: write
+
+on: [workflow_dispatch]
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
     - uses: actions/checkout@v6
     - uses: astral-sh/setup-uv@v7
