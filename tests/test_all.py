@@ -35,11 +35,10 @@ def test_error():
         @parametrized
         def _(name=(), value=()): ...
 
-    @parametrized.zip
-    def strict(name="abc", value=()): ...
-
     with pytest.raises(ValueError):
-        list(strict.pytestmark[0].args[1])
+
+        @parametrized.zip
+        def strict(name="abc", value=()): ...
 
 
 @parametrized.product
