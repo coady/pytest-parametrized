@@ -5,7 +5,7 @@ description = "Pytest decorator for parametrizing tests with default iterables."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
-authors = [{name = "Aric Coady", email = "aric.coady@gmail.com"}]
+authors = [{name = "A. Coady"}]
 keywords = ["pytest", "parametrize", "parameterize", "fixture"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
