@@ -1,4 +1,5 @@
 import pytest
+
 from parametrized import parametrized
 
 data = parametrized.fixture("one", "two")

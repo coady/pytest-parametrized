@@ -31,13 +31,17 @@ def test(name=values, name1=values1, ...):
 
 Zip before and after example:
 ```python
-@pytest.mark.parametrize("test_input,expected", [
-    ("3+5", 8),
-    ("2+4", 6),
-    ("6*9", 42),
-])
+@pytest.mark.parametrize(
+    "test_input,expected",
+    [
+        ("3+5", 8),
+        ("2+4", 6),
+        ("6*9", 42),
+    ],
+)
 def test_eval(test_input, expected):
     assert eval(test_input) == expected
+
 
 @parametrized.zip
 def test_eval(test_input=["3+5", "2+4", "6*9"], expected=[8, 6, 42]):
@@ -50,6 +54,7 @@ Product before and after example:
 @pytest.mark.parametrize("y", [2, 3])
 def test_foo(x, y):
     pass
+
 
 @parametrized.product
 def test_foo(x=[0, 1], y=[2, 3]):
@@ -70,6 +75,7 @@ Before and after example:
 @pytest.fixture(params=[0, 1], ids=["spam", "ham"])
 def a(request):
     return request.param
+
 
 a = parametrized.fixture(0, 1, ids=["spam", "ham"])
 ```

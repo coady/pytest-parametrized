@@ -27,6 +27,9 @@ Homepage = "https://github.com/coady/pytest-parametrized"
 Changelog = "https://github.com/coady/pytest-parametrized/blob/main/CHANGELOG.md"
 Issues = "https://github.com/coady/pytest-parametrized/issues"
 
+[tool.ruff.lint.per-file-ignores]
+"test_*.py" = ["B"]
+
 [tool.coverage.run]
 source = ["parametrized"]
 branch = true

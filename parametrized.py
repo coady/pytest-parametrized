@@ -1,6 +1,7 @@
 import inspect
 import itertools
 from functools import partial
+
 import pytest
 
 
